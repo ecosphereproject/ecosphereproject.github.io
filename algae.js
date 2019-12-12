@@ -6,7 +6,7 @@ class Algae {
 		this.size = 5;
 		this.range = 300;
 		this.growThreshold = 10;
-		this.growCost = 8;
+		this.growCost = 10;
 		this.children = new Array;
 		this.DNA = JSON.parse(JSON.stringify(starterShrimpDNA));
 	}
