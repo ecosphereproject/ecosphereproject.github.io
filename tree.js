@@ -2,12 +2,11 @@ var shadowPointsA = [];
   var shadowPointsB = [];
 function initTree(){
   var a = createVector(width / 2, height);
-  var b = createVector(width / 2, height - h/4);
+  var b = createVector(width / 2, height - h/4.25);
   var root = new Branch(a, b, 20);
   tree[0] = root;
-  
 
-  for (var i=0; i<20; i++){
+  for (var i=0; i<40; i++){
     shadowPointsA
     tree.push(tree[i].branchA());
     //shadowPointsA.push(tree[i]);
@@ -33,7 +32,7 @@ function Branch(begin, end, thickness) {
 
   this.branchA = function() {
     var dir = p5.Vector.sub(this.end, this.begin);
-    dir.rotate(PI / 6);
+    dir.rotate(PI / 7.5);
     dir.mult(0.67);
     var newEnd = p5.Vector.add(this.end, dir);
     var b = new Branch(this.end, newEnd, this.thickness*.67);
