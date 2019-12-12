@@ -135,7 +135,7 @@ class Shrimp {
   feed(){
     //if there's overlap
     for (var i=0; i < algaePopulation.length; i++){ 
-      if (dist(algaePopulation[i].pos.x, algaePopulation[i].pos.y, this.pos.x, this.pos.y) < this.size){
+      if (dist(algaePopulation[i].pos.x, algaePopulation[i].pos.y, this.pos.x, this.pos.y) < this.size/2){
         algaePopulation.splice(i,1); //kill algae
         this.eat(); //eat boost
         
