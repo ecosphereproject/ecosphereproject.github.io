@@ -30,7 +30,7 @@ class Algae {
 			if (this.fed >= this.growThreshold){ //If it has more food than it needs
 				this.fed -= this.growCost;
 				var childX = random(-this.range,this.range) + this.pos.x;
-				var childY = this.pos.y+random(this.range)*Math.floor(max(-1,random(-2,1)));
+				var childY = this.pos.y+random(-this.range,this.range);//*Math.floor(max(-1,random(-2,1)))
 				var child = new Algae(childX, childY, this.DNA);
 				algaePopulation.push(child);
 			}
